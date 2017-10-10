@@ -8,8 +8,8 @@ block content
         div.col.col-sm-9.col-xs-12(style="border-right:thin solid silver;margin-bottom:50px;")
             h3: a(href="/factory") App#1 : Sentiment Analysis
             div.form-group: div
-                textarea.form-control(ng-model="sentiment.rawtext", rows="4")
-            button.btn.btn-primary.btn-block(type="submit",ng-click="sentiment.analyseAction('analyse')") Analyse
+                textarea.form-control(rows="4", ng-model="sentiment.rawtext")
+            button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
 
             div(ng-hide="sentiment.label==''")
                 br
@@ -23,6 +23,10 @@ block content
             h4: a(href="/pipelines") PipeLine
 
 block footer_script
+    script(src="/static/js/ng1/app.js")
+    script(src="/static/js/ng1/services.js")
+    script(src="/static/js/ng1/directives.js")
+    script(src="/static/js/ng1/controllers.js")
     script.
         $(document).ready(function() {
             $('li#home').addClass('active');
