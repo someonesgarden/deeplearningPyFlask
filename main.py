@@ -16,6 +16,9 @@ import numpy as np
 import jinja2
 import json
 
+import app.sentiment_analysis_app as saa
+
+
 # ---------------------------- IMPORT::CUSTOM ---------------------
 
 from lib.flask.Form1 import *
@@ -45,6 +48,31 @@ def index():
     name, password, like = None, None, None
     return render_template('main.jade', essentials={"site_title":"サイトタイトル"}, sentiment="test")
 
+@app.route('/sentimentanalysis', methods=['GET', 'POST'])
+def sentimentanalysis():
+    if request.method == 'POST':
+        form = request.form
+    else:
+        form = request.args
+    param = json.loads(form.get('param'))
+    res = {}
+    print(param)
+
+    if param['action'] == 'analyse':
+        review = param['review']
+        label, proba = "", 0.0
+        if review != "":
+            label, proba = saa.classify(review)
+
+
+    elif param['action'] == 'feedback':
+        review = param['review']
+        prediction = param['prediction']
+
+
+    res['action'] = 'feedback'
+
+    return jsonify(res)
 
 # ---------------------------- ROUTE::ERROR -------------------------
 

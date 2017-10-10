@@ -95,32 +95,40 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
                 headers : {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
                 transformRequest: transform,
                 data    : data
-            }).success(function(data, status, headers, config){
-                $log.log(data);
-                $log.log("success!");
-                $scope.sentiment.feedback=-1;
+            })
+                .then(function(res){
+                        $log.log("log",res.data);
+                        $scope.sentiment.feedback=-1;
+                },
+                function(res_error){
+                    console.log(res_error);
+                });
 
-                if(data.action=='analyse') {
-                    var proba = Math.round(data.proba * 100) +' %';
-                    $scope.sentiment.proba = proba;
-                    $scope.sentiment.label = data.label;
-                    $scope.sentiment.fontcolor='#23dea1';
-                }
-                else if(data.action=='feedback') {
-                    $scope.sentiment.feedback=-1;
-                    $log.log("feedbaack");
-                    $scope.sentiment.label = data.label;
-                    $scope.sentiment.fontcolor='#de3423';
-                }
-                else{
-                    $scope.sentiment.feedback=-1;
-                     $log.log("not analyse");
-
-                }
-
-              }).error(function(data, status, headers, config){
-                  $log.log("$http FAILED");
-            });
+              //   .success(function(data, status, headers, config){
+              //   $log.log(data);
+              //   $log.log("success!");
+              //   $scope.sentiment.feedback=-1;
+              //
+              //   if(data.action=='analyse') {
+              //       var proba = Math.round(data.proba * 100) +' %';
+              //       $scope.sentiment.proba = proba;
+              //       $scope.sentiment.label = data.label;
+              //       $scope.sentiment.fontcolor='#23dea1';
+              //   }
+              //   else if(data.action=='feedback') {
+              //       $scope.sentiment.feedback=-1;
+              //       $log.log("feedbaack");
+              //       $scope.sentiment.label = data.label;
+              //       $scope.sentiment.fontcolor='#de3423';
+              //   }
+              //   else{
+              //       $scope.sentiment.feedback=-1;
+              //        $log.log("not analyse");
+              //
+              //   }
+              // }).error(function(data, status, headers, config){
+              //     $log.log("$http FAILED");
+              // });
         };
 
         $scope.sentiment.feedbackAction = function(num){
