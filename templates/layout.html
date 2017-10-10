@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if essentials %}
+        <title>{{ essentials.site_title }}</title>
+        {% else %}
+        <title>Deep Learnings by Someonesgarden.</title>
+        {% endif %}
+
+    <link href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" ref="shortcut icon">
+    <link href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" ref="icon">
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="bodyController">
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="container-fluid">
+                    {% include 'masthead.html' %}
+                    <div class="inner cover">
+                        {% block content %}{% endblock %}
+                    </div>
+                    {% include 'footer.html' %}
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/MathJax/MathJax.js') }}"></script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+                }
+        });
+        </script>
+        <script src="{{ url_for('static', filename='vendor/angular/angular.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/angular-bootstrap/ui-bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/angular-bootstrap/ui-bootstrap-tpls.min.js') }}"></script>
+
+        <script src="https://cdn.rawgit.com/indrimuska/angular-switcher/master/dist/angular-switcher.min.js"></script>
+        <link href="https://cdn.rawgit.com/indrimuska/angular-switcher/master/dist/angular-switcher.min.css" rel="stylesheet">
+
+
+        {% block footer_script %}{% endblock %}
+
+
+        <script src="{{ url_for('static', filename='vendor/bootstrap-filestyle/src/bootstrap-filestyle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/highlightjs/highlight.pack.min.js') }}"></script>
+        <link  href="{{ url_for('static', filename='vendor/highlightjs/styles/tomorrow-night.css') }}" rel="stylesheet">
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </body>
+</html>
