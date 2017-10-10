@@ -74,7 +74,7 @@ class SentimentAnalysis(object):
         if not os.path.exists(path2proj + '/data/movie_data.csv'):
             self.load_csv_to_local()
         self.df = pd.read_csv(path2proj+'/data/movie_data.csv')
-        print self.df.head(3)
+        print(self.df.head(3))
 
         count = CountVectorizer(ngram_range=(1,1))
         tfidf = TfidfTransformer()
@@ -86,20 +86,20 @@ class SentimentAnalysis(object):
         ])
         bag = count.fit_transform(docs)
 
-        print count.vocabulary_
-        print bag.toarray()
+        print(count.vocabulary_)
+        print(bag.toarray())
 
         np.set_printoptions(precision=2)
-        print "tfidf.fit_transform(count.fit_transform(docs).toarray())"
-        print tfidf.fit_transform(count.fit_transform(docs)).toarray()
+        print("tfidf.fit_transform(count.fit_transform(docs).toarray())")
+        print(tfidf.fit_transform(count.fit_transform(docs)).toarray())
 
         self.df['review'] = self.df['review'].apply(self.preprocessor)
 
         # test = [w for w in self.tokenizer_port('a runner likes running and runs a lot')[-10:] if w not in self.stop]
         # print test
 
-        print "df:shape"
-        print self.df.shape
+        print("df:shape")
+        print(self.df.shape)
 
         self.training_logistic_reg(self.df)
 
@@ -107,7 +107,7 @@ class SentimentAnalysis(object):
         if not os.path.exists(path2proj + '/data/movie_data.csv'):
             self.load_csv_to_local()
         self.df = pd.read_csv(path2proj + '/data/movie_data.csv')
-        print self.df.head(3)
+        print(self.df.head(3))
 
         vect = HashingVectorizer(decode_error='ignore',
                                  n_features=2**21,
@@ -127,7 +127,7 @@ class SentimentAnalysis(object):
 
         X_test, y_test = get_minibatch(doc_stream, size=5000)
         X_test = vect.transform(X_test)
-        print 'Accuracy: %.3f' % clf.score(X_test, y_test)
+        print('Accuracy: %.3f' % clf.score(X_test, y_test))
         pickle.dump(stop,
                     open(os.path.join(dest, 'stopwords.pkl'), 'wb')
                     )
@@ -172,10 +172,10 @@ class SentimentAnalysis(object):
 
         gs_lr_tfidf.fit(self.X_train, self.y_train)
 
-        print 'Best parameter set: %s ' % gs_lr_tfidf.best_params_
-        print 'CV Accuracy: %.3f ' % gs_lr_tfidf.best_score_
+        print('Best parameter set: %s ' % gs_lr_tfidf.best_params_)
+        print('CV Accuracy: %.3f ' % gs_lr_tfidf.best_score_)
         clf = gs_lr_tfidf.best_estimator_
-        print 'Test Accuracy: %.3f' % clf.score(self.X_test, self.y_test)
+        print('Test Accuracy: %.3f' % clf.score(self.X_test, self.y_test))
 
 
 def tokenizer_(text):

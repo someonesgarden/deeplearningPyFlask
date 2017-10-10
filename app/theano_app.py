@@ -15,9 +15,9 @@ def scalar_test():
 
     net_input = theano.function(inputs=[w1,x1,w0], outputs=z1)
 
-    print 'theano.config.floatX'
-    print theano.config.floatX
-    print 'Net input: %.2f' % net_input(2.0, 1.0, 0.5)
+    print('theano.config.floatX')
+    print(theano.config.floatX)
+    print('Net input: %.2f' % net_input(2.0, 1.0, 0.5))
 
 
 def mat_text():
@@ -29,13 +29,13 @@ def mat_text():
     calc_sum = theano.function(inputs=[x], outputs=x_sum)
 
     ary = np.array([[1,2,3],[4,5,6]], dtype=theano.config.floatX)
-    print 'Column sum: ', calc_sum(ary)
-    print x.type()
-    print x_sum.type()
-    print type(x)
+    print('Column sum: ', calc_sum(ary))
+    print(x.type())
+    print(x_sum.type())
+    print(type(x))
 
     ary2 = [[1,2,3], [7,8,9]]
-    print 'Column sum with list: ', calc_sum(ary2)
+    print('Column sum with list: ', calc_sum(ary2))
 
 
 def update_test():
@@ -55,7 +55,7 @@ def update_test():
                                 givens={x: data},
                                 outputs=z)
     for i in range(5):
-        print 'z%d:' % i, net_input()
+        print('z%d:' % i, net_input())
 
 
 X_train = np.asarray(

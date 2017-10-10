@@ -25,9 +25,9 @@ from lib.flask.Form1 import *
 
 # ---------------------------- IMPORT::DEEPLEARNING ---------------
 
-#import model.DataPreprocessing as mdp
-#import model.ModelFitting as mmf
-#import app.sentiment_analysis_app as saa
+import model.DataPreprocessing as mdp
+import model.ModelFitting as mmf
+import app.sentiment_analysis_app as saa
 
 # ---------------------------- DEFINE APPLICATION ------------------
 app = Flask(__name__)
@@ -63,6 +63,10 @@ def sentimentanalysis():
         label, proba = "", 0.0
         if review != "":
             label, proba = saa.classify(review)
+
+        res['action'] = 'analyse'
+        res['label'] = label
+        res['proba'] = proba
 
 
     elif param['action'] == 'feedback':

@@ -36,7 +36,7 @@ def tanh(z):
 
 
 def main():
-    print 'P(y=1|x) = %.3f' % logistic_activatioin(X, w)[0]
+    print('P(y=1|x) = %.3f' % logistic_activatioin(X, w)[0])
 
     W = np.array([[1.1, 1.2, 1.3, 0.5],
                   [0.1, 0.2, 0.4, 0.1],
@@ -48,6 +48,6 @@ def main():
     Z = W.dot(A)
     y_probas = logistic(Z)
     y_probas2 = softmax(Z)
-    print 'Probabilities logistic:\n', y_probas
+    print('Probabilities logistic:\n', y_probas)
 
-    print 'Probabilities softmax:\n', y_probas2
+    print('Probabilities softmax:\n', y_probas2)

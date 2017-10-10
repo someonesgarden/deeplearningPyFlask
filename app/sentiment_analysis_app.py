@@ -104,7 +104,7 @@ def update_model(path, model, batch_size=10000):
 
 # ----------------
 
-# cur_dir = os.path.dirname(__file__)
-# clf = pickle.load(open(os.path.join(cur_dir, 'movieclassifier/pkl_objects/classifier.pkl'), 'rb'))
-# db = os.path.join(cur_dir, 'reviews.sqlite')
-# update_model(path=db, model=clf, batch_size=10000)
+cur_dir = os.path.dirname(__file__)
+clf = pickle.load(open(os.path.join(cur_dir, 'movieclassifier/pkl_objects/classifier.pkl'), 'rb'))
+db = os.path.join(cur_dir, 'reviews.sqlite')
+update_model(path=db, model=clf, batch_size=10000)
