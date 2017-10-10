@@ -1,0 +1,14 @@
+/*masonry */
+.thumb {
+    position: relative;
+    min-height: 1px;
+    padding: 5px;
+
+}
+.thumbnail {
+    background: rgba(20,20,20,0.3);
+    border:thin dashed silver;
+    -webkit-box-shadow: 0 2px 3px -3px #777;
+    -moz-box-shadow: 0 2px 3px -3px #777;
+    box-shadow: 0 2px 3px -3px #777;
+}
