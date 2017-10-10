@@ -1,0 +1,49 @@
+doctype 5
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(href="/static/favicon.ico", type="image/x-icon", rel="shortcut icon")
+        link(href="/static/favicon.ico", type="image/x-icon", rel="icon")
+        link(rel="stylesheet", href="/static/vendor/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/static/css/cover.css")
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+
+        if essentials
+            title {{ essentials.site_title }}
+        else
+            title DeepLearnings by Someonesgarden.
+        endif
+
+    body(ng-controller="bodyController")
+        div.site-wrapper
+            div.site-wrapper-inner
+                div.container-fluid
+                    include masthead.html
+                    div.inner.cover
+                        block content
+                    include footer.html
+
+        script(src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}")
+        script(src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.min.js') }}")
+        script(src="{{ url_for('static', filename='vendor/MathJax/MathJax.js') }}")
+        script(type="text/x-mathjax-config").
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['$','$'], ['\\(','\\)']],
+                    processEscapes: true
+                    }
+            });
+        script(src="/static/vendor/angular/angular.min.js")
+        script(src="/static/vendor/angular-bootstrap/ui-bootstrap.min.js")
+        script(src="/static/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js")
+        script(src="https://cdn.rawgit.com/indrimuska/angular-switcher/master/dist/angular-switcher.min.js")
+        link(href="https://cdn.rawgit.com/indrimuska/angular-switcher/master/dist/angular-switcher.min.css")
+        script(src="/static/vendor/bootstrap-filestyle/src/bootstrap-filestyle.min.js")
+        script(src="/static/vendor/highlightjs/highlight.pack.min.js")
+        link(href="/static/vendor/highlightjs/styles/tomorrow-night.css")
+        script.
+            hljs.initHighlightingOnLoad();
+        block footer_script

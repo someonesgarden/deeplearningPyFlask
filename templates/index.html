@@ -1,5 +1,51 @@
 {% extends "layout.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
+
 {% block content %}
 
-{%  endblock %}
+<div class="row factory-boxr" style="min-height:400px;">
+
+    <div class="col col-xs-12" style="margin-top:30px;height:100px;">
+        <h2>Deep Learning Applications.</h2>
+    </div>
+
+    <div class="col col-sm-9 col-xs-12"  style="border-right:thin solid silver;margin-bottom:50px;">
+        <h3><a href="/factory">App#1 : Sentiment Analysis</a></h3>
+        <div class="form-group">
+            <div>
+                <textarea class="form-control" ng-model="sentiment.rawtext" rows="4"></textarea>
+            </div>
+        </div>
+         <button type="submit" class="btn btn-primary btn-block" ng-click="sentiment.analyseAction('analyse')">Analyse</button>
+
+        {% raw %}
+        <div ng-hide="sentiment.label==''">
+            <br/>
+            <h3>Prediction | <span style="color:#23dea1;">{{sentiment.proba}}</span> <span style="color:{{sentiment.fontcolor}}">{{sentiment.label}}</span> </h3>
+            <br/>
+            <div class="btn-group btn-group-justified">
+                <label class="btn btn-success" ng-model="sentiment.feedback" uib-btn-radio="1">Correct</label>
+                <label class="btn btn-success" ng-model="sentiment.feedback" uib-btn-radio="0" ng-change="sentiment.analyseAction('feedback')">Incorrect</label>
+            </div>
+            <br/>
+        </div>
+        {% endraw %}
+
+    </div>
+
+    <div class="col col-sm-3 col-xs-12">
+        <h4><a href="/factory">Basic Factory</a></h4>
+        <h4><a href="/pipelines">PipeLine</a></h4>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block footer_script %}
+<script>
+$(document).ready(function() {
+    $('li#home').addClass('active');
+});
+</script>
+{% endblock %}
