@@ -82,7 +82,7 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
                         action: action,
                         status: true,
                         review: $scope.sentiment.rawtext,
-                        prediction:  $scope.sentiment.label
+                        prediction: $scope.sentiment.label
                     };
 
             var data = {
@@ -97,8 +97,34 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
                 data    : data
             })
                 .then(function(res){
-                        $log.log("log",res.data);
+                    console.log("type",res.data.action);
+                    console.log("res.data",res.data);
+
+                    if(res.data.action=='analyse') {
+                        var proba = Math.round(res.data.proba * 100) +' %';
+                        $scope.sentiment.proba = proba;
+                        $scope.sentiment.label = res.data.label;
+                        $scope.sentiment.fontcolor='#23dea1';
+
+                    }
+                    else if(res.data.action=='feedback') {
                         $scope.sentiment.feedback=-1;
+                        $log.log("feedbaack");
+                        var proba = Math.round(res.data.proba * 100) +' %';
+
+                        console.log(proba);
+                        $scope.sentiment.proba = proba;
+                        $scope.sentiment.label = res.data.label;
+                        $scope.sentiment.fontcolor='#de3423';
+
+                    }
+                    else{
+                        $scope.sentiment.feedback=-1;
+                         $log.log("not analyse");
+                    }
+
+
+
                 },
                 function(res_error){
                     console.log(res_error);
@@ -109,23 +135,7 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
               //   $log.log("success!");
               //   $scope.sentiment.feedback=-1;
               //
-              //   if(data.action=='analyse') {
-              //       var proba = Math.round(data.proba * 100) +' %';
-              //       $scope.sentiment.proba = proba;
-              //       $scope.sentiment.label = data.label;
-              //       $scope.sentiment.fontcolor='#23dea1';
-              //   }
-              //   else if(data.action=='feedback') {
-              //       $scope.sentiment.feedback=-1;
-              //       $log.log("feedbaack");
-              //       $scope.sentiment.label = data.label;
-              //       $scope.sentiment.fontcolor='#de3423';
-              //   }
-              //   else{
-              //       $scope.sentiment.feedback=-1;
-              //        $log.log("not analyse");
-              //
-              //   }
+
               // }).error(function(data, status, headers, config){
               //     $log.log("$http FAILED");
               // });

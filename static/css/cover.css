@@ -1,18 +1,3 @@
-/*
- * Globals
-
-- 768px            : phone
-min 768px - 992px  : tablets
-min 992px - 1200px : desktops
-min 1200px -       : large device/TV
-
-
-Default : extra small devices
-> 34em  : small devices
-> 48em  : medium devices
-> 62em  : large devices
-> 75em  : extra large devices*/
-
 /* Links */
 a
 {
@@ -56,12 +41,9 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  /*
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          */
 }
 .site-wrapper-inner {
+    padding-top:50px;
   display: table-cell;
   vertical-align: top;
 }
@@ -147,9 +129,12 @@ body {
  */
 
 .mastfoot {
+  width: 100%;
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
     text-align:center;
+     position:absolute;
+    bottom: 0;
 }
 
 
@@ -161,7 +146,7 @@ body {
 @media (min-width: 768px) {
 
     h1.cover-heading{
-        padding-top:100px;
+        padding-top:20px;
     }
 
   /* Pull out the header and footer */
@@ -170,22 +155,15 @@ body {
     top: 0;
     text-align:center !important;
   }
-  .mastfoot {
-    /* position: fixed; */
-    margin-bottom:30px;
-    bottom: 0;
-    text-align:center;
-  }
+
+
   /* Start the vertical centering */
 
-    .site-wrapper-inner{
-
-              margin-top:120px;
-    }
   .site-wrapper-inner {
-    vertical-align: middle;
-
+    padding-top:80px;
+    /* vertical-align: middle; */
   }
+
   /* Handle the widths */
   .masthead,
   .mastfoot,
@@ -222,4 +200,15 @@ div.factory-box {
 
 div.factory-form{
     margin-bottom:12px;
+}
+
+
+@media (min-width: 768px) {
+  #navbarCollapse {
+    float: right;
+  }
+}
+
+.block{
+  margin-bottom:50px;
 }

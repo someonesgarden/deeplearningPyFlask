@@ -1,0 +1,33 @@
+extends layout_ja
+
+block content
+        div.row.text-center
+            div.block.col.col-md-4
+                h1 DSFSDF
+                p \( E = mc ^ 2 \)
+                p \(\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\)
+
+            div.block.col.col-md-4
+                h1 col-2
+                p col-xs-3
+
+            div.block.col.col-md-4
+                h1 col-2
+                p col-xs-3
+
+block footer_script
+
+    //LATEX SCRIPTS
+    script(type="text/x-mathjax-config").
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+                }
+        });
+    script(src="/static/vendor/MathJax/MathJax.js?config=TeX-AMS_HTML")
+    //SCRIPT HIGHLIGHT.JS
+    link(href="/static/vendor/highlightjs/styles/tomorrow-night.css")
+    script(src="/static/vendor/highlightjs/highlight.pack.min.js")
+    script.
+        hljs.initHighlightingOnLoad();

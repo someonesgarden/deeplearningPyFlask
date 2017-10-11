@@ -46,7 +46,23 @@ site_title = "funwithdata:Deep"
 @app.route('/', methods=['GET', 'POST'])
 def index():
     name, password, like = None, None, None
-    return render_template('main.jade', essentials={"site_title":"サイトタイトル"}, sentiment="test")
+    return render_template('basic.jade', essentials={"site_title":"DeepLearningSomeonesgarden"}, sentiment="test")
+
+
+@app.route('/main', methods=['GET', 'POST'])
+def main():
+    name, password, like = None, None, None
+    return render_template('main.jade', essentials={"site_title":"DeepLearningSomeonesgarden"}, sentiment="test")
+
+@app.route('/math')
+def math():
+    essentials = {
+        'utc_nowtime': datetime.utcnow(),
+        'site_title': site_title,
+        'title': "MATH.",
+        'subtitle': ""
+    }
+    return render_template('math.jade', essentials=essentials, test1=123)
 
 @app.route('/sentimentanalysis', methods=['GET', 'POST'])
 def sentimentanalysis():
@@ -87,13 +103,13 @@ def sentimentanalysis():
 @app.errorhandler(504)
 @app.errorhandler(501)
 def error_handler(err):
-    return render_template('404.html', error=err), 404
+    return render_template('404_ja.jade', error=err), 404
 
 @app.errorhandler(ValueError)
 @app.errorhandler(UnicodeDecodeError)
 @app.errorhandler(jinja2.exceptions.TemplateNotFound)
 def error_handler(err):
-    return render_template('404.html', error=err)
+    return render_template('404_ja.jade', error=err)
 
 # ---------------------------- MAIN ----------------------------------
 

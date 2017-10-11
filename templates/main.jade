@@ -2,25 +2,23 @@ extends layout_ja
 //import "bootstrap/wtf.html" as wtf
 
 block content
-    div.row.factory-boxr(style="min-height:400px")
-        div.col.col-xs-12(style="margin-top:30px;height:100px;")
-            h2 Deep Learning Applications.
-        div.col.col-sm-9.col-xs-12(style="border-right:thin solid silver;margin-bottom:50px;")
-            h3: a(href="/factory") App#1 : Sentiment Analysis
-            div.form-group: div
-                textarea.form-control(rows="4", ng-model="sentiment.rawtext")
-            button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
 
-            div(ng-hide="sentiment.label==''")
-                br
-                h3 Prediction | <span style="color:#23dea1;">{{sentiment.proba}}</span> <span style="color:{{sentiment.fontcolor}}">{{sentiment.label}}</span>
-                br
-                div.btn-group.btn-group-justified
-                    label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="1") Correct
-                    label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
-        div.col.col-sm-3.col-xs-12
-            h4: a(href="/factory") Basic Factory
-            h4: a(href="/pipelines") PipeLine
+    div.col.col-sm-6
+        h3: a(href="/factory") App#1 : Sentiment Analysis
+        div.form-group: div
+            textarea.form-control(rows="4", ng-model="sentiment.rawtext")
+        button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
+
+        div(ng-bind="result1")
+
+        div(ng-hide="sentiment.label==''")
+            br
+            h3 Prediction | <span style="color:#23dea1;" ng-bind="sentiment.proba"></span> <span style="color:{{sentiment.fontcolor}}" ng-bind="sentiment.label"></span>
+            br
+            div.btn-group.btn-group-justified
+                label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="1") Correct
+                label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
+
 
 block footer_script
     script(src="/static/js/ng1/app.js")
