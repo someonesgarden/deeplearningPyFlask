@@ -2,33 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b583d74-b468-4522-9288-9e16e6f0a398" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/SVM_Donut_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/SVM_XOR_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/SVM_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/graph_sigmoid.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/skl_logistic_regression_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/skl_perceptron_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/dlp/xor_donut.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/DecisionTree_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/DecisionTree_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/RandomForest_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/RandomForest_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/__init__.py" afterPath="$PROJECT_DIR$/app/main/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/adalineGD_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/adalineGD_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/adalineSGD_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/adalineSGD_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/linear_regression_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/linear_regression_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/logistic_regression_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/logistic_regression_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dlp/perceptron_main.py" afterPath="$PROJECT_DIR$/app/main/dlp/perceptron_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/AdaBoost.py" afterPath="$PROJECT_DIR$/app/model/AdaBoost.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/Baggings.py" afterPath="$PROJECT_DIR$/app/main/Baggings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/DataPreprocessing.py" afterPath="$PROJECT_DIR$/app/model/DataPreprocessing.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/MajorityVoteClassifier.py" afterPath="$PROJECT_DIR$/app/model/MajorityVoteClassifier.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/ModelFitting.py" afterPath="$PROJECT_DIR$/app/model/ModelFitting.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/Pipelines.py" afterPath="$PROJECT_DIR$/app/model/Pipelines.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/__init__.py" afterPath="$PROJECT_DIR$/app/main/dlp/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/model/ensembles.py" afterPath="$PROJECT_DIR$/app/model/ensembles.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/classifier/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/classifier/movieclassifier/pkl_objects/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/main/theano/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/movieclassifier/pkl_objects/classifier.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/movieclassifier/pkl_objects/classifier_.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/movieclassifier/pkl_objects/stopwords.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/movieclassifier/pkl_objects/vectorizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/movieclassifier/vectorizer.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/krasapp/pkl_objects/classifier.pkl" afterPath="$PROJECT_DIR$/app/classifier/krasapp/pkl_objects/classifier.pkl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/main/Baggings.py" afterPath="$PROJECT_DIR$/app/main/dlp/Baggings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/mnist/pkl_objects/classifier.pkl" afterPath="$PROJECT_DIR$/app/classifier/mnist/pkl_objects/classifier.pkl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/movieclassifier/__init__.py" afterPath="$PROJECT_DIR$/app/classifier/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/regression_analysis.py" afterPath="$PROJECT_DIR$/app/model/LinearRegressionGD.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/theano_app.py" afterPath="$PROJECT_DIR$/app/main/theano/theano_app.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/theano_app2.py" afterPath="$PROJECT_DIR$/app/main/theano/theano_app2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/keras_mnist_app.py" afterPath="$PROJECT_DIR$/app/keras_mnist_app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/nltk_mecab.py" afterPath="$PROJECT_DIR$/app/nltk_mecab.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sentiment_analysis_app.py" afterPath="$PROJECT_DIR$/app/sentiment_analysis_app.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,12 +31,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="neuralnet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/neuralnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-979">
+              <caret line="353" column="20" lean-forward="true" selection-start-line="353" selection-start-column="20" selection-end-line="353" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mnist_app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/mnist_app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#63#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nltk_mecab.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/nltk_mecab.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#48#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,12 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/Pipelines.py" />
-        <option value="$PROJECT_DIR$/app/theano_app.py" />
-        <option value="$PROJECT_DIR$/app/theano_app2.py" />
-        <option value="$PROJECT_DIR$/app/SentimentAnalysis.py" />
-        <option value="$PROJECT_DIR$/app/sentiment_analysis_app.py" />
-        <option value="$PROJECT_DIR$/app/movieclassifier/pkl_objects/vectorizer.py" />
         <option value="$PROJECT_DIR$/templates/404_ja.jade" />
         <option value="$PROJECT_DIR$/templates/masthead_ja.jade" />
         <option value="$PROJECT_DIR$/templates/layout_ja.jade" />
@@ -129,6 +141,12 @@
         <option value="$PROJECT_DIR$/app/model/ensembles.py" />
         <option value="$PROJECT_DIR$/app/model/Pipelines.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/keras_mnist_app.py" />
+        <option value="$PROJECT_DIR$/app/theano_app.py" />
+        <option value="$PROJECT_DIR$/app/theano_app2.py" />
+        <option value="$PROJECT_DIR$/app/regression_analysis.py" />
+        <option value="$PROJECT_DIR$/app/model/LinearRegressionGD.py" />
+        <option value="$PROJECT_DIR$/app/nltk_mecab.py" />
       </list>
     </option>
   </component>
@@ -172,6 +190,11 @@
               <item name="deeplearningFlask" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="deeplearningFlask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deeplearningFlask" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -189,7 +212,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/classifier" />
       <recent name="$PROJECT_DIR$/app/model" />
+      <recent name="$PROJECT_DIR$/app/main/theano" />
+      <recent name="$PROJECT_DIR$/app/main/dlp" />
       <recent name="$PROJECT_DIR$/app/main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -296,62 +322,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/ng1/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/404.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="93" lean-forward="true" selection-start-line="8" selection-start-column="93" selection-end-line="8" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/math.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/aframe.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/cover.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -365,25 +335,14 @@
         <state relative-caret-position="900">
           <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding>
-            <element signature="e#63#73#0" expanded="true" />
-            <marker date="1507622488000" expanded="true" signature="416:482" ph="CREATE TABLE... review_db" />
-            <marker date="1507622488000" expanded="true" signature="571:665" ph="INSERT INTO review_db... " />
-            <marker date="1507622488000" expanded="true" signature="737:832" ph="INSERT INTO review_db... " />
-            <marker date="1507622488000" expanded="true" signature="901:985" ph="SELECT * FRO... review_db" />
-            <marker date="1507622488000" expanded="true" signature="1175:1241" ph="CREATE TABLE... review_db" />
-            <marker date="1507622488000" expanded="true" signature="1337:1421" ph="SELECT * FRO... review_db" />
-            <marker date="1507622488000" expanded="true" signature="1977:2055" ph="INSERT INTO review_db... " />
-            <marker date="1507622488000" expanded="true" signature="2229:2252" ph="SELECT * fro... review_db" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/regression_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1507809451000" expanded="true" signature="417:483" ph="CREATE TABLE... review_db" />
+            <marker date="1507809451000" expanded="true" signature="572:666" ph="INSERT INTO review_db... " />
+            <marker date="1507809451000" expanded="true" signature="738:833" ph="INSERT INTO review_db... " />
+            <marker date="1507809451000" expanded="true" signature="902:986" ph="SELECT * FRO... review_db" />
+            <marker date="1507809451000" expanded="true" signature="1176:1242" ph="CREATE TABLE... review_db" />
+            <marker date="1507809451000" expanded="true" signature="1338:1422" ph="SELECT * FRO... review_db" />
+            <marker date="1507809451000" expanded="true" signature="1978:2056" ph="INSERT INTO review_db... " />
+            <marker date="1507809451000" expanded="true" signature="2230:2253" ph="SELECT * fro... review_db" />
           </folding>
         </state>
       </provider>
@@ -428,31 +387,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/theano_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/uploaded/spx.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/keras_mnist_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
-          <folding>
-            <element signature="e#63#72#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,24 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/ADAlineGD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/LinearRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#91#109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/main/dlp/graph_sigmoid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -676,16 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/Baggings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding>
-            <element signature="e#63#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/ModelFitting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -731,6 +642,127 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/dlp/Baggings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="e#63#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/theano/theano_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/theano/theano_app2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="e#47#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/kmeans_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/LinearRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#91#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/ADAlineGD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/LinearRegressionGD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/neuralnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-979">
+          <caret line="353" column="20" lean-forward="true" selection-start-line="353" selection-start-column="20" selection-end-line="353" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/keras_mnist_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding>
+            <element signature="e#63#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classifier/mnist/pkl_objects/classifier.pkl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classifier/krasapp/pkl_objects/classifier.pkl">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-115691">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mnist_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#63#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/nltk_mecab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
+
 import theano
 import numpy as np
 import matplotlib.pyplot as plt
@@ -51,3 +54,7 @@ def main():
     print('Probabilities logistic:\n', y_probas)
 
     print('Probabilities softmax:\n', y_probas2)
+
+
+if __name__ == '__main__':
+    main()

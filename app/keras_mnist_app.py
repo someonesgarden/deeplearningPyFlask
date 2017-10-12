@@ -3,21 +3,16 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
-sys.path.append(path2proj)
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
 
 import struct
 import pickle
-import pyprind
 import numpy as np
 import theano
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers.core import Dense
 from keras.optimizers import SGD
-import matplotlib.pyplot as plt
-from app.neuralnet import NeuralNetMLP
-from app.neuralnet import MLPGradientCheck
 
 cur_dir = os.path.dirname(__file__)
 dest = os.path.join(cur_dir, 'krasapp/pkl_objects')

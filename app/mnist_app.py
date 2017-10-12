@@ -8,11 +8,9 @@ sys.path.append(path2proj)
 
 import struct
 import pickle
-import pyprind
 import numpy as np
 import matplotlib.pyplot as plt
-from app.neuralnet import NeuralNetMLP
-from app.neuralnet import MLPGradientCheck
+from app.model.neuralnet import NeuralNetMLP
 
 cur_dir = os.path.dirname(__file__)
 dest = os.path.join(cur_dir, 'mnist/pkl_objects')

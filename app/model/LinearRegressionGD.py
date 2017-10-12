@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
+
+import sys
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,12 +11,10 @@ import seaborn as sns
 import os
 import importlib
 import os.path
-import sys
-path2proj = "/Users/user/PycharmProjects/DeepLearningPy"
-sys.path.append(path2proj)
 importlib.reload(sys)
+
 cur_dir = os.path.dirname(__file__)
-df = pd.read_csv(os.path.join(cur_dir, '../static/uploaded/boston_house_prices.csv'), header=0)
+df = pd.read_csv(os.path.join(cur_dir, '../../static/uploaded/boston_house_prices.csv'), header=0)
 cols = ['LSTAT', 'INDUS', 'NOX', 'RM', 'MEDV']
 
 

@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-
 # -*- coding: utf-8 -*-
+
 import codecs
 import os
 import sys
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
 import importlib
-path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
-sys.path.append(path2proj)
 
 import MeCab
 from lib.chasen import *
@@ -20,7 +19,6 @@ from nltk.corpus.reader.util import *
 from nltk.text import Text
 from xml.dom.minidom import parse
 from math import log
-
 from nltk.book import *
 
 def getNoun(words):

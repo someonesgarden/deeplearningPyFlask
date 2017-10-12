@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 # coding: utf-8
 # -*- coding: utf-8 -*-
-import sys
-import os
 import importlib
+import os
 import sqlite3
+import sys
+
 path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
 sys.path.append(path2proj)
 importlib.reload(sys)
 import pickle
 import numpy as np
-from app.movieclassifier.vectorizer import vect
+from app.classifier.movieclassifier import vect
 
 
 def create_sql_examples():
