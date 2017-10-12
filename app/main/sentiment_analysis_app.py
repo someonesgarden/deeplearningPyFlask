@@ -5,13 +5,12 @@ import importlib
 import os
 import sqlite3
 import sys
-
 path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
 sys.path.append(path2proj)
 importlib.reload(sys)
 import pickle
 import numpy as np
-from app.classifier.movieclassifier import vect
+from app.classifier.movieclassifier.vectorizer import vect
 
 
 def create_sql_examples():

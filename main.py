@@ -20,7 +20,7 @@ import json
 
 # ---------------------------- IMPORT::DEEPLEARNING ---------------
 
-import app.sentiment_analysis_app as saa
+import app.main.sentiment_analysis_app as saa
 
 # ---------------------------- DEFINE APPLICATION ------------------
 app = Flask(__name__)

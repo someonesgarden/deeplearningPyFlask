@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
+
 from sklearn.datasets import make_blobs
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -120,3 +123,8 @@ def plot_silhouette_anal():
 
 
 
+
+if __name__ == "__main__":
+    plot_cluster_inertia()
+    plot_cluster_scatter()
+    plot_silhouette_anal()

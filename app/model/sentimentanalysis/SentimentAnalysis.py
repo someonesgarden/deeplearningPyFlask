@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 # coding: utf-8
 # -*- coding: utf-8 -*-
+
+import sys
+path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
+sys.path.append(path2proj)
+
 import pyprind
 import pandas as pd
 import numpy as np
 import os
 import os.path
-import sys
+
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from nltk.stem.porter import PorterStemmer
@@ -23,8 +28,7 @@ import pickle
 import re
 import math
 
-path2proj = "/Users/user/PycharmProjects/deeplearningFlask"
-sys.path.append(path2proj)
+
 stop = stopwords.words('english')
 
 dest = os.path.join('app/movieclassifier', 'pkl_objects')
