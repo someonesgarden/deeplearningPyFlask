@@ -9,6 +9,31 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
 
         console.log("bodyController::init");
 
+
+        //-------- Analysis1
+        $scope.analys1 = {'data':'analys1.data'};
+
+        $scope.analys1func1 = function(){
+          console.log($scope.analys1);
+
+          var data = {
+                param:JSON.stringify($scope.analys1)
+            };
+
+          $http({
+                method  :'POST',
+                url     :'/analys1',
+                headers : {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                transformRequest: transform,
+                data    : data
+            })
+                .then(function(res){
+                            console.log("res.data",res.data);
+
+                });
+        };
+
+
         //loaded
         $scope.loaded ={
             csv_rows        :[],
@@ -105,7 +130,6 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
                         $scope.sentiment.proba = proba;
                         $scope.sentiment.label = res.data.label;
                         $scope.sentiment.fontcolor='#23dea1';
-
                     }
                     else if(res.data.action=='feedback') {
                         $scope.sentiment.feedback=-1;
@@ -116,14 +140,11 @@ controllers.controller('bodyController', ['$scope', '$log', '$http','$uibModal',
                         $scope.sentiment.proba = proba;
                         $scope.sentiment.label = res.data.label;
                         $scope.sentiment.fontcolor='#de3423';
-
                     }
                     else{
                         $scope.sentiment.feedback=-1;
                          $log.log("not analyse");
                     }
-
-
 
                 },
                 function(res_error){

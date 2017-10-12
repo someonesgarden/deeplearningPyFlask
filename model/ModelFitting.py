@@ -23,7 +23,7 @@ from sklearn.lda import LDA
 from lib.ADAlineSGD import *
 from sklearn.svm import SVC
 
-sys.path.append("/Users/user/PycharmProjects/DeepLearningPy")
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
 url0 = '/Users/user/PycharmProjects/DeepLearningPy/static/uploaded/iris.data.csv'
 
 

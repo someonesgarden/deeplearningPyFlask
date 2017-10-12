@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import operator
 import math
-sys.path.append("/Users/user/PycharmProjects/DeepLearningPy")
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
 
 
 class MajorityVoteClassifier(BaseEstimator, ClassifierMixin):

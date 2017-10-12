@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.preprocessing import Imputer
 import numpy as np
 from pandas import Series
-sys.path.append("/Users/user/PycharmProjects/DeepLearningPy")
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
 #url1 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data'
 http_regex = re.compile("http[s]?")
 local_regex = re.compile("static\/uploaded?")
@@ -95,7 +95,6 @@ class DataPreProcess(object):
                         pass
                     # except UnboundLocalError, e:
                     #     pass
-
                     columns = self.df.columns
                     self.df = pd.DataFrame(imr.transform(self.df.values), columns=columns)
                     self.param['message'] += "NULL Imputed.\n"

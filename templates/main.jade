@@ -2,22 +2,27 @@ extends layout
 //import "bootstrap/wtf.html" as wtf
 
 block content
+    div.site-wrapper: div.site-wrapper-inner: div.container
+        div.col-sm-4
+            h3 Perceptron
+            div.form-group
+                input.form-control(type="text", name="name", placeholder="est",ng-model="analys1.data")
+            button.btn.btn-primary.btn-block(type="submit", ng-click="analys1func1()") Analyse
 
-    div.col.col-sm-6
-        h3: a(href="/factory") App#1 : Sentiment Analysis
-        div.form-group: div
-            textarea.form-control(rows="4", ng-model="sentiment.rawtext")
-        button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
+        div.col.col-sm-4
+            h3 Sentiment Analysis
+            div.form-group
+                textarea.form-control(rows="4", ng-model="sentiment.rawtext")
+            button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
+            div(ng-bind="result1")
 
-        div(ng-bind="result1")
-
-        div(ng-hide="sentiment.label==''")
-            br
-            h3 Prediction | <span style="color:#23dea1;" ng-bind="sentiment.proba"></span> <span style="color:{{sentiment.fontcolor}}" ng-bind="sentiment.label"></span>
-            br
-            div.btn-group.btn-group-justified
-                label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="1") Correct
-                label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
+            div(ng-hide="sentiment.label==''")
+                br
+                h3 Prediction | <span style="color:#23dea1;" ng-bind="sentiment.proba"></span> <span style="color:{{sentiment.fontcolor}}" ng-bind="sentiment.label"></span>
+                br
+                div.btn-group.btn-group-justified
+                    label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="1") Correct
+                    label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
 
 block footer_script
     script(src="/static/js/ng1/app.js")

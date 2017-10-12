@@ -2,6 +2,8 @@ doctype html
 html(lang="ja", id="ng-app")
 
     head
+        block header_script
+
         if essentials
             title {{ essentials.site_title }}
         else
@@ -27,7 +29,7 @@ html(lang="ja", id="ng-app")
     body(ng-controller="bodyController")
 
         include masthead.jade
-        div.site-wrapper: div.site-wrapper-inner: div.container: block content
+        block content
         include footer.jade
 
         //JQUERY, ANGULAR.JS, BOOTSTRAP

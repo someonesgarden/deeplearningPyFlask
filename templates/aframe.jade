@@ -1,10 +1,20 @@
 extends layout
 //import "bootstrap/wtf.html" as wtf
 
+block header_script
+    script.
+        window.WebVRConfig = {
+            BUFFER_SCALE: 1,
+            CARDBOARD_UI_DISABLED: true,
+            ROTATE_INSTRUCTIONS_DISABLED: true,
+            TOUCH_PANNER_DISABLED: true,
+            MOUSE_KEYBOARD_CONTROLS_DISABLED: true
+        };
+
 block content
     div#VRController(style="position: absolute; height: 100%; width: 100%;")
         a-scene
-            a-cube
+            a-box(color="#B76705", depth="2", height="2", width="4", position="0 0 -3.25")
             a-sky(color="skyblue")
 
 block footer_script
