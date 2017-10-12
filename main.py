@@ -40,6 +40,12 @@ manager = Manager(app)
 bootstrap = Bootstrap(app)
 site_title = "funwithdata:Deep"
 
+
+# ---------------------------- FAVICON ------------------------------
+@app.route('/favicon.ico')
+def favicon():
+    return (url_for('static', filename='favicon.ico'))
+
 # ---------------------------- ROUTE --------------------------------
 
 
@@ -49,10 +55,17 @@ def index():
     return render_template('basic.jade', essentials={"site_title":"DeepLearningSomeonesgarden"}, sentiment="test")
 
 
+@app.route('/aframe', methods=['GET', 'POST'])
+def aframe():
+    name, password, like = None, None, None
+    return render_template('aframe.jade', essentials={"site_title":"DeepLearningSomeonesgarden"}, sentiment="test")
+
+
 @app.route('/main', methods=['GET', 'POST'])
 def main():
     name, password, like = None, None, None
     return render_template('main.jade', essentials={"site_title":"DeepLearningSomeonesgarden"}, sentiment="test")
+
 
 @app.route('/math')
 def math():
@@ -64,6 +77,7 @@ def math():
     }
     return render_template('math.jade', essentials=essentials, test1=123)
 
+
 @app.route('/sentimentanalysis', methods=['GET', 'POST'])
 def sentimentanalysis():
     if request.method == 'POST':
@@ -72,7 +86,6 @@ def sentimentanalysis():
         form = request.args
     param = json.loads(form.get('param'))
     res = {}
-    print(param)
 
     if param['action'] == 'analyse':
         review = param['review']
@@ -84,17 +97,16 @@ def sentimentanalysis():
         res['label'] = label
         res['proba'] = proba
 
-
     elif param['action'] == 'feedback':
         review = param['review']
         prediction = param['prediction']
-
 
     res['action'] = 'feedback'
 
     return jsonify(res)
 
 # ---------------------------- ROUTE::ERROR -------------------------
+
 
 @app.route('/404')
 @app.errorhandler(404)
@@ -103,13 +115,14 @@ def sentimentanalysis():
 @app.errorhandler(504)
 @app.errorhandler(501)
 def error_handler(err):
-    return render_template('404_ja.jade', error=err), 404
+    return render_template('404.jade', error=err), 404
+
 
 @app.errorhandler(ValueError)
 @app.errorhandler(UnicodeDecodeError)
 @app.errorhandler(jinja2.exceptions.TemplateNotFound)
 def error_handler(err):
-    return render_template('404_ja.jade', error=err)
+    return render_template('404.jade', error=err)
 
 # ---------------------------- MAIN ----------------------------------
 

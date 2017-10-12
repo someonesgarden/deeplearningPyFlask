@@ -1,4 +1,4 @@
-extends layout_ja
+extends layout
 //import "bootstrap/wtf.html" as wtf
 
 block content
@@ -19,13 +19,8 @@ block content
                 label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="1") Correct
                 label.btn.btn-success(ng-model="sentiment.feedback", uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
 
-
 block footer_script
     script(src="/static/js/ng1/app.js")
     script(src="/static/js/ng1/services.js")
     script(src="/static/js/ng1/directives.js")
     script(src="/static/js/ng1/controllers.js")
-    script.
-        $(document).ready(function() {
-            $('li#home').addClass('active');
-        });
