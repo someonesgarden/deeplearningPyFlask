@@ -1,22 +1,22 @@
-from scipy.misc import comb
-import matplotlib.pyplot as plt
-import numpy as np
-import math
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
+
+import sys
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
+from itertools import product
 from sklearn import datasets
-from sklearn.cross_validation import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import LabelEncoder
 from sklearn.cross_validation import cross_val_score
+from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import auc
+from sklearn.metrics import roc_curve
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
-from model.MajorityVoteClassifier import *
-from sklearn.metrics import roc_curve
-from sklearn.metrics import auc
-import operator
-from itertools import product
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier
 
+from app.model.MajorityVoteClassifier import *
 
 class Ensembles(object):
 

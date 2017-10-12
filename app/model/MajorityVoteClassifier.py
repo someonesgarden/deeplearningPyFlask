@@ -2,6 +2,8 @@
 # -*- coding: UTF-8 -*-# enable debugging
 
 import sys
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
 from scipy.misc import comb
 from sklearn.base import BaseEstimator
 from sklearn.base import ClassifierMixin
@@ -14,7 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import operator
 import math
-sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
 
 
 class MajorityVoteClassifier(BaseEstimator, ClassifierMixin):

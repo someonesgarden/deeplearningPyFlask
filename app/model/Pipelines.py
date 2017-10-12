@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# _*_ coding:utf-8 _*_
+
+import sys
+sys.path.append('/Users/user/PycharmProjects/deeplearningFlask')
+
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder

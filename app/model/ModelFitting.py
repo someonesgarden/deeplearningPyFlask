@@ -2,12 +2,14 @@
 # -*- coding: UTF-8 -*-# enable debugging
 
 import sys
+sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from lib.LinearRegression import *
-from lib.LogisticRegression import LogisticRegression as logReg
-from lib.util import plot_decisionregions
+from app.model.LinearRegression import *
+from app.model.LogisticRegression import LogisticRegression as logReg
+from app.lib.util import plot_decisionregions
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import Imputer
 from sklearn.preprocessing import MinMaxScaler
@@ -20,10 +22,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.decomposition import PCA
 from sklearn.decomposition import KernelPCA
 from sklearn.lda import LDA
-from lib.ADAlineSGD import *
+from app.model.ADAlineSGD import *
 from sklearn.svm import SVC
 
-sys.path.append("/Users/user/PycharmProjects/deeplearningFlask")
+
 url0 = '/Users/user/PycharmProjects/DeepLearningPy/static/uploaded/iris.data.csv'
 
 

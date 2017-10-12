@@ -7,24 +7,19 @@ sys.path.append(path2proj)
 
 # ---------------------------- IMPORT::VENDOR ---------------------
 
-from flask import Flask, request, render_template, redirect, url_for, jsonify
+from flask import Flask, request, render_template, url_for, jsonify
 from flask_script import Manager
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from datetime import datetime
-import numpy as np
 import jinja2
 import json
 
 
 # ---------------------------- IMPORT::CUSTOM ---------------------
 
-from lib.flask.Form1 import *
-
 # ---------------------------- IMPORT::DEEPLEARNING ---------------
 
-import model.DataPreprocessing as mdp
-import model.ModelFitting as mmf
 import app.sentiment_analysis_app as saa
 
 # ---------------------------- DEFINE APPLICATION ------------------

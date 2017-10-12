@@ -89,3 +89,9 @@ class MyAdaBoost(object):
 
         plt.text(10.2, -1.2, s='Hue', ha='center', va='center', fontsize=12)
         plt.show()
+
+
+if __name__ == "__main__":
+    mada = MyAdaBoost()
+    mada.check_accuracies()
+    mada.decision_region()
